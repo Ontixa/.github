@@ -19,13 +19,38 @@ execution-safety and control surfaces for terminal coding agents.
 - Interested in the language and its machine-readable semantics? Start with
   [ontixa](https://github.com/Ontixa/ontixa).
 - Want to run coding agents under explicit policy and recovery? See
-  [agent-loop-runtime](https://github.com/Ontixa/agent-loop-runtime), then pair it with
-  [ai-cli-editor](https://github.com/Ontixa/ai-cli-editor), the desktop cockpit that
-  consumes its mission status and events.
+  [agent-loop-runtime](https://github.com/Ontixa/agent-loop-runtime).
+  For a desktop workspace around terminal coding sessions, explore
+  [ai-cli-editor](https://github.com/Ontixa/ai-cli-editor).
 - Care about authorization, provenance, and rollback for agent side effects?
   Read [veyra](https://github.com/Ontixa/veyra).
 - For the broader governed project model behind one portable file, explore
   [worldos](https://github.com/Ontixa/worldos).
+
+## First run: agent-loop-runtime
+
+Requires Git and Node.js (24.14.1 verified locally; Node 20, 22 and 24 tested in CI).
+
+```bash
+git clone https://github.com/Ontixa/agent-loop-runtime.git
+cd agent-loop-runtime
+npm ci
+npm run build
+node scripts/demo-mission.mjs
+```
+
+This runs a real bounded mission with a deterministic local Node fixture agent,
+not an AI model. No AI account is needed. It creates a temporary repository and
+isolated worktree, checks exact output with an independent validation command,
+and prints the retained receipt and evidence paths. It does not use your project
+as the mission repository or publish changes.
+
+Run `node scripts/demo-mission.mjs --fail-validation` to see incorrect output
+rejected even when the agent process succeeds; this deliberately exits 1.
+See the [demo and its limits](https://github.com/Ontixa/agent-loop-runtime#try-a-mission-without-an-ai-account)
+for cleanup and verification details. Running a model-backed mission additionally
+requires a configured, authenticated, supported agent CLI, its sandbox/workspace
+trust setup, and real validation commands for the intended task.
 
 ## Contributing
 
@@ -35,6 +60,9 @@ Each repository keeps its own contributing guide:
 [agent-loop-runtime](https://github.com/Ontixa/agent-loop-runtime/blob/main/CONTRIBUTING.md) ·
 [ai-cli-editor](https://github.com/Ontixa/ai-cli-editor/blob/main/CONTRIBUTING.md) ·
 [veyra](https://github.com/Ontixa/veyra/blob/main/CONTRIBUTING.md)
+
+Looking for somewhere to help? Browse
+[open issues across the Ontixa org](https://github.com/search?q=org%3AOntixa+is%3Aissue+is%3Aopen&type=issues).
 
 ## Maintainer
 
