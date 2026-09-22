@@ -8,11 +8,11 @@ execution-safety and control surfaces for terminal coding agents.
 
 | Project | Description |
 | --- | --- |
-| [ontixa](https://github.com/Ontixa/ontixa) | Semantic-first systems programming language and compiler pipeline, designed for human and autonomous machine programmers. |
-| [worldos](https://github.com/Ontixa/worldos) | AI-native project engine: a governed, schema-versioned universal project graph behind a portable `.worldos` file, driven by CLI, JSON-RPC, MCP, SDK, and desktop surfaces. |
-| [agent-loop-runtime](https://github.com/Ontixa/agent-loop-runtime) | Headless runtime that runs coding agents (Codex, Claude Code, Devin, Qwen Code, OpenCode, Aider, custom CLIs) as bounded, resumable missions with worktree isolation and human approval gates. |
-| [ai-cli-editor](https://github.com/Ontixa/ai-cli-editor) | Desktop control plane for terminal coding agents — project tabs, live session telemetry, worktree isolation, and diff review. Built with Tauri 2, React, and Rust. |
-| [veyra](https://github.com/Ontixa/veyra) | Local, embeddable execution kernel that turns agent side effects into versioned transactions with least-authority capabilities, exact approvals, and verified rollback. |
+| [ontixa](https://github.com/Ontixa/ontixa) | Experimental semantic-first systems programming language and compiler pipeline for human and autonomous machine programmers — multi-module workspaces, inferred ownership contracts, semantic rename transactions, and `ontixa fmt`; programs run in a reference interpreter (no native codegen yet). |
+| [worldos](https://github.com/Ontixa/worldos) | AI-native project engine: a governed, schema-versioned universal project graph behind a portable `.worldos` file, driven by CLI, JSON-RPC, MCP, SDK, and desktop surfaces — with an opt-in CAD workflow (`geometry.measure`, `geometry.export`, artifact export) and a hosted plugin runtime. |
+| [agent-loop-runtime](https://github.com/Ontixa/agent-loop-runtime) | Headless runtime that runs coding agents (Codex, Claude Code, Devin, Gemini CLI, Qwen Code, OpenCode, Aider, custom CLIs) as bounded, resumable missions with worktree isolation, human approval gates, and a loopback daemon control API plus MCP server. |
+| [ai-cli-editor](https://github.com/Ontixa/ai-cli-editor) | Desktop control plane for terminal coding agents — agent sessions cockpit, live token and cost telemetry, worktree isolation, checkpoints, deterministic review classification, and diff review. Built with Tauri 2, React, and Rust. |
+| [veyra](https://github.com/Ontixa/veyra) | Local, embeddable execution kernel (v0.1.0 released) that turns agent side effects into versioned transactions with least-authority capabilities, exact approvals, and verified rollback. |
 
 ## Where to start
 
